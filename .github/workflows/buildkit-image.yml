@@ -27,7 +27,7 @@ on:
         type: boolean
 
 env:
-  DOCKERHUB_SLUG: docker/buildkit-syft-scanner
+  DOCKERHUB_SLUG: thespad/buildkit-syft-scanner
 
 jobs:
   create:
