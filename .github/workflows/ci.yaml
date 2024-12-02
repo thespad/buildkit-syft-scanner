@@ -14,7 +14,7 @@ on:
   pull_request:
 
 env:
-  DOCKERHUB_SLUG: docker/buildkit-syft-scanner
+  DOCKERHUB_SLUG: thespad/buildkit-syft-scanner
   BUILDX_VERSION: latest
   BUILDKIT_IMAGE: moby/buildkit:latest
 
