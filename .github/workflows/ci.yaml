@@ -80,5 +80,5 @@ jobs:
         uses: peter-evans/dockerhub-description@v4
         with:
           username: ${{ vars.DOCKERPUBLICBOT_USERNAME }}
-          password: ${{ secrets.DOCKERPUBLICBOT_DELETE_PAT }}
+          password: ${{ secrets.DOCKERPUBLICBOT_WRITE_PAT }}
           repository: ${{ env.DOCKERHUB_SLUG }}
