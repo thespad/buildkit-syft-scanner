@@ -24,6 +24,7 @@ import (
 	"github.com/anchore/syft/syft/sbom"
 	"github.com/anchore/syft/syft/source"
 	"github.com/docker/buildkit-syft-scanner/version"
+	"github.com/anchore/syft/syft/source/directorysource"
 )
 
 type Target struct {
@@ -35,7 +36,7 @@ func (t Target) Name() string {
 }
 
 func (t Target) Scan() (sbom.SBOM, error) {
-	src, err := source.NewFromDirectory(source.DirectoryConfig{
+	src, err := directorysource.New(directorysource.Config{
 		Path: t.Path,
 		Base: t.Path,
 		Alias: source.Alias{

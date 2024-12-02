@@ -13,7 +13,7 @@
 // limitations under the License.
 
 variable "GO_VERSION" {
-  default = "1.21"
+  default = "1.22"
 }
 
 # GITHUB_REF is the actual ref that triggers the workflow and used as version
@@ -52,11 +52,7 @@ target "image-all" {
   inherits = ["_common", "docker-metadata-action"]
   platforms = [
     "linux/amd64",
-    "linux/arm/v7",
-    "linux/arm64",
-    "linux/ppc64le",
-    "linux/riscv64",
-    "linux/s390x"
+    "linux/arm64"
   ]
 }
 
